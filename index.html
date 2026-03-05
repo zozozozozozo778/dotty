@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/addons/p5.sound.min.js"></script>
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <main>
+      
+      <div class="control-panel open" id="controlPanel">
+  
+  <div class="control-header" id="controlHeader">
+    <span class="panel-title">Control Panel</span>
+    <button class="collapse-btn" id="collapseBtn">−</button>
+  </div>
+
+  <div class="control-content">
+
+    <!-- Block 1: Sliders -->
+<div class="control-block">
+
+  <div class="control-group">
+    <label>Grid Spacing</label>
+    <div class="slider-row">
+      <div class="range-slider" data-target="gridSpacing">
+        <div class="slider-track">
+          <div class="slider-fill"></div>
+        </div>
+        <input type="range" min="0.5" max="2" step="0.1" value="1">
+     </div>
+      <span class="slider-value">0.9</span>
+    </div>
+    
+  </div>
+
+  <div class="control-group">
+    <label>Outer Dot Size</label>
+    <div class="slider-row">
+    <div class="range-slider" data-target="outerDotSize">
+      <div class="slider-track">
+        <div class="slider-fill"></div>
+      </div>
+      <input type="range" min="0" max="2" step="0.1" value="1">
+    </div>
+     <span class="slider-value">0.9</span>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label>Inner Dot Size</label>
+    <div class="slider-row">
+    <div class="range-slider" data-target="innerDotSize">
+      <div class="slider-track">
+        <div class="slider-fill"></div>
+      </div>
+      <input type="range" min="0" max="2" step="0.1" value="1">
+    </div>
+     <span class="slider-value">0.9</span>
+    </div>
+  </div>
+
+</div>
+    <!-- Block 2: Toggles -->
+    <div class="control-block">
+
+      <div class="toggle-group">
+        <label>Show Grid</label>
+        <label class="switch">
+          <input type="checkbox" id="toggleGrid" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="toggle-group">
+        <label>Show Inner Dot</label>
+        <label class="switch">
+          <input type="checkbox" id="toggleInnerDot" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+
+    </div>
+
+    <!-- Block 3: Color Pickers -->
+    <div class="control-block">
+
+      <div class="color-group">
+        <label>BG Fill</label>
+        <input type="color" id="bgColor" value="#ffffff">
+      </div>
+
+      <div class="color-group">
+        <label>Letter Fill</label>
+        <input type="color" id="letterColor" value="#434343">
+      </div>
+
+      <div class="color-group">
+        <label>Dot Fill</label>
+        <input type="color" id="dotColor" value="#E5E5E5">
+      </div>
+
+    </div>
+
+  </div>
+</div>
+      
+    </main>
+    <script src="sketch.js"></script>
+      <script src="slider.js"></script>
+  </body>
+</html>
